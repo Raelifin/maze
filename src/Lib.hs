@@ -48,7 +48,7 @@ genMaze width height gen = do
   floorplan <- IOArr.newArray (XY 0 0, dim) Wall :: IO (IOArr.IOArray XY Space)
   MArr.writeArray floorplan startingPos Floor
   let mazeSeed = (floorplan, startingPos, 0, randomDeltas)
-  Loop.iterateUntilM goodMaze buildMaze mazeSeed
+  -- Loop.iterateUntilM goodMaze buildMaze mazeSeed
   -- let validSquares = zip [1, 3 .. width] [1, 3 .. height]
   -- TODO: Find some notion of whether or not a valid square can exit the maze
   -- TODO: Fill in the dead-ends in the rest of the maze
