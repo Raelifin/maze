@@ -26,6 +26,7 @@ library
                      , random
                      , array
                      , monad-loops
+                     , random-shuffle
                      , fmt
   default-language:    Haskell2010
 
